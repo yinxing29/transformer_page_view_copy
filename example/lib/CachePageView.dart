@@ -1,15 +1,15 @@
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart';
 import 'dart:math';
 
 class MyViewPort extends RenderSliverFillViewport {
   int itemCount;
 
-  MyViewPort(
-      {@required RenderSliverBoxChildManager childManager,
-      double viewportFraction = 1.0,
-      this.itemCount})
+  MyViewPort({
+    required RenderSliverBoxChildManager childManager,
+    double viewportFraction = 1.0,
+    this.itemCount = 0,
+  })
       : super(childManager: childManager, viewportFraction: viewportFraction);
 
   @override
@@ -35,13 +35,12 @@ class MyViewPort extends RenderSliverFillViewport {
 class MySliverFillViewport extends SliverMultiBoxAdaptorWidget {
   /// Creates a sliver whose box children that each fill the viewport.
   //
-  const MySliverFillViewport(
-      {Key key,
-      @required SliverChildDelegate delegate,
-      this.viewportFraction = 1.0,
-      this.itemCount})
-      : assert(viewportFraction != null),
-        assert(viewportFraction > 0.0),
+  const MySliverFillViewport({Key? key,
+    required SliverChildDelegate delegate,
+    this.viewportFraction = 1.0,
+    this.itemCount = 0,
+  })
+      : assert(viewportFraction > 0.0),
         super(key: key, delegate: delegate);
 
   /// The fraction of the viewport that each child should fill in the main axis.
@@ -55,7 +54,7 @@ class MySliverFillViewport extends SliverMultiBoxAdaptorWidget {
 
   @override
   RenderSliverFillViewport createRenderObject(BuildContext context) {
-    final SliverMultiBoxAdaptorElement element = context;
+    final SliverMultiBoxAdaptorElement element = context as SliverMultiBoxAdaptorElement;
     return new MyViewPort(
         childManager: element,
         itemCount: itemCount,
@@ -81,10 +80,11 @@ class Ext extends PageView {}
 class MyPageView extends StatelessWidget {
   final SliverChildListDelegate childrenDelegate;
 
-  MyPageView({List<Widget> children})
-      : childrenDelegate = new SliverChildListDelegate(children);
+  MyPageView({
+    List<Widget> children = const [],
+  }) : childrenDelegate = new SliverChildListDelegate(children);
 
-  PageController controller = new PageController();
+  final PageController controller = PageController();
 
   Widget build(BuildContext context) {
     return new Scrollable(

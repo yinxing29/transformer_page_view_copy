@@ -8,7 +8,10 @@ class ColorPainter extends CustomPainter {
   final TransformInfo info;
   final List<Color> colors;
 
-  ColorPainter(this._paint, this.info, this.colors);
+  ColorPainter(this._paint, {
+    required this.info,
+    required this.colors,
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -68,29 +71,17 @@ class ColorPainter extends CustomPainter {
   }
 }
 
-class _ParallaxColorState extends State<ParallaxColor> {
-  Paint paint = new Paint();
-
-  @override
-  Widget build(BuildContext context) {
-    return new CustomPaint(
-      painter: new ColorPainter(paint, widget.info, widget.colors),
-      child: widget.child,
-    );
-  }
-}
-
 class ParallaxColor extends StatefulWidget {
-  final Widget child;
+  final Widget? child;
 
   final List<Color> colors;
 
   final TransformInfo info;
 
   ParallaxColor({
-    @required this.colors,
-    @required this.info,
-    @required this.child,
+    required this.colors,
+    required this.info,
+    required this.child,
   });
 
   @override
@@ -99,19 +90,30 @@ class ParallaxColor extends StatefulWidget {
   }
 }
 
+
+class _ParallaxColorState extends State<ParallaxColor> {
+  Paint paint = new Paint();
+
+  @override
+  Widget build(BuildContext context) {
+    return new CustomPaint(
+      painter: ColorPainter(paint, info: widget.info, colors: widget.colors),
+      child: widget.child,
+    );
+  }
+}
+
 class ParallaxContainer extends StatelessWidget {
-  final Widget child;
+  final Widget? child;
   final double position;
   final double translationFactor;
   final double opacityFactor;
 
   ParallaxContainer(
-      {@required this.child,
-      @required this.position,
-      this.translationFactor: 100.0,
-      this.opacityFactor: 1.0})
-      : assert(position != null),
-        assert(translationFactor != null);
+      {required this.child,
+      required this.position,
+      this.translationFactor = 100.0,
+      this.opacityFactor = 1.0});
 
   @override
   Widget build(BuildContext context) {
@@ -129,9 +131,8 @@ class ParallaxImage extends StatelessWidget {
   final Image image;
   final double imageFactor;
 
-  ParallaxImage.asset(String name, {double position, this.imageFactor: 0.3})
-      : assert(imageFactor != null),
-        image = Image.asset(name,
+  ParallaxImage.asset(String name, {double position = 0.0, this.imageFactor = 0.3})
+      : image = Image.asset(name,
             fit: BoxFit.cover,
             alignment: FractionalOffset(
               0.5 + position * imageFactor,

@@ -9,26 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da615bec-bd21-494f-ae3e-e28a9fad9952" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/yourcompany/example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/yourcompany/example/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/AccordionTransformer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/AccordionTransformer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/CachePageView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/CachePageView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/DeepthPageTransformer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/DeepthPageTransformer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/FixlistTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/FixlistTest.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/images.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/parallax.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/parallax.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/transformer_page_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/transformer_page_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="da615bec-bd21-494f-ae3e-e28a9fad9952" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

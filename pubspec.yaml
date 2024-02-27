@@ -4,7 +4,7 @@ version: 0.1.6
 homepage: https://github.com/yinxing29/transformer_page_view_copy
 
 environment:
-  sdk: ">=2.12.0 <3.2.0"
+  sdk: ">=2.12.0 <3.3.0"
 
 dependencies:
   flutter:
